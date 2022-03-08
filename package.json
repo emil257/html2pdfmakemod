@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/Aymkdn/html-to-pdfmake#readme",
   "devDependencies": {
-    "eslint": "^5.16.0",
+    "eslint-plugin-react": "^7.29.3",
     "jsdom": "^16.6.0",
     "pdfmake": "^0.1.70",
     "simple-test-framework": "^0.1.7",
@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "browserify-shim": "^3.8.14",
+    "eslint": "^8.10.0",
     "save": "^2.4.0"
   }
 }
