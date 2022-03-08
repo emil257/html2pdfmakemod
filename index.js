@@ -656,7 +656,7 @@ function htmlToPdfMake(htmlText, options) {
             // else {
             //   value = _this.convertToUnit(value);
             // }
-            ret.push({key:"lineHeight", value:value - 0.5});
+            ret.push({key:"lineHeight", value:value - (value * 0.333)});
             break;
           }
           case "text-align": {
