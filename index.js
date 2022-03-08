@@ -61,7 +61,7 @@ function htmlToPdfMake(htmlText, options) {
     h6: {fontSize:14, bold:true, marginBottom:5},
     a: {color:'blue', decoration:'underline'},
     strike: {decoration: 'lineThrough'},
-    p: {margin:[0, 5, 0, 10]},
+    p: {margin:[0, 0, 0, 0]},
     ul: {marginBottom:5,marginLeft:5},
     table: {marginBottom:5},
     th: {bold:true, fillColor:'#EEEEEE'}
@@ -653,10 +653,12 @@ function htmlToPdfMake(htmlText, options) {
             if (typeof value === "string" && value.slice(-1) === '%') {
               value = value.slice(0,-1) / 100;
             } 
+
+            // console.log(value)
             // else {
             //   value = _this.convertToUnit(value);
             // }
-            ret.push({key:"lineHeight", value:value});
+            ret.push({key:"lineHeight", value:value - 0.5});
             break;
           }
           case "text-align": {
