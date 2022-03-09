@@ -62,8 +62,8 @@ function htmlToPdfMake(htmlText, options) {
     a: {color:'blue', decoration:'underline'},
     strike: {decoration: 'lineThrough'},
     p: {margin:[0, 0, 0, 0]},
-    ul: {marginBottom:10,marginLeft:20},
-    ol: {marginBottom:10,marginLeft:20},
+    ul: {marginBottom:12,marginLeft:25},
+    ol: {marginBottom:12,marginLeft:25},
     table: {marginBottom:5},
     th: {bold:true, fillColor:'#EEEEEE'}
   }
