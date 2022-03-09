@@ -626,16 +626,6 @@ function htmlToPdfMake(htmlText, options) {
     var borders = []; // special treatment for borders
     var nodeName = element.nodeName.toUpperCase();
     var _this=this;
-
-    var fontSize = 14
-    styleDefs.forEach(function(styleDef) { 
-      if (styleDef.length===2) { 
-        var key = styleDef[0].trim();
-        var value = styleDef[1].trim();
-        if(key === 'font-size') fontSize = _this.convertToUnit(value)
-      } 
-    })
-
     styleDefs.forEach(function(styleDef) {
       if (styleDef.length===2) {
         var key = styleDef[0].trim();
@@ -666,11 +656,6 @@ function htmlToPdfMake(htmlText, options) {
             // else {
             //   value = _this.convertToUnit(value);
             // }
-
-            let itemHeight = parseInt(value) * fontSize
-            let spacing = itemHeight - fontSize
-            if(spacing > 0) ret.push({key:"relativePosition", value:{x:0, y: spacing/2}})
-            ret.push({key:"relativePosition", value:{x:0, y: 5}})
             ret.push({key:"lineHeight", value:value});
             break;
           }
