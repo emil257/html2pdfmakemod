@@ -653,9 +653,9 @@ function htmlToPdfMake(htmlText, options) {
             if (typeof value === "string" && value.slice(-1) === '%') {
               value = value.slice(0,-1) / 100;
             } 
-            // else {
-            //   value = _this.convertToUnit(value);
-            // }
+            else {
+              value = _this.convertToUnit(value);
+            }
             ret.push({key:"lineHeight", value:value});
             break;
           }
