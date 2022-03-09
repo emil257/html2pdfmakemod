@@ -669,8 +669,8 @@ function htmlToPdfMake(htmlText, options) {
 
             let itemHeight = parseInt(value) * fontSize
             let spacing = itemHeight - fontSize
-            if(spacing > 0) ret.push({key:"absolutePosition", value:{x:0, y: spacing/2}})
-            ret.push({key:"absolutePosition", value:{x:0, y: 5}})
+            if(spacing > 0) ret.push({key:"relativePosition", value:{x:0, y: spacing/2}})
+            ret.push({key:"relativePosition", value:{x:0, y: 5}})
             ret.push({key:"lineHeight", value:value});
             break;
           }
