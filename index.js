@@ -59,7 +59,7 @@ function htmlToPdfMake(htmlText, options) {
     h4: {fontSize:18, bold:true, marginBottom:5},
     h5: {fontSize:16, bold:true, marginBottom:5},
     h6: {fontSize:14, bold:true, marginBottom:5},
-    a: {color:'blue', decoration:null},
+    a: {color:'#08686d'},
     strike: {decoration: 'lineThrough'},
     p: {margin:[0, 0, 0, 0]},
     ul: {marginBottom:12,marginLeft:25},
