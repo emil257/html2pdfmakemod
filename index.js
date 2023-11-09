@@ -582,7 +582,7 @@ function htmlToPdfMake(htmlText, options) {
         // 'decoration' can be an array
         if (stl.key === "decoration") {
           if (!Array.isArray(params.ret[stl.key])) params.ret[stl.key]=[];
-          params.ret[stl.key].push(stl.value);
+          if(!params.ret[stl.key].includes(stl.value)) params.ret[stl.key].push(stl.value);
         } else {
           // when 'params.ret.margin' is defined but also a 'marginXYZ' is defined in `stl.key`,
           // then we should change the correct index in `params.ret.margin` to reflect it
